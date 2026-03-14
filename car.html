@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Showroom</title>
+
+    <style>
+        :root {
+            --main-color: rgb(219, 151, 15);
+            --dark: black;
+            --light: white;
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(120deg, #f6f9fc, #e9eff5);
+        }
+
+
+        header {
+            background: var(--dark);
+            color: white;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            color: var(--main-color);
+        }
+
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            position: relative;
+        }
+
+        nav a::after {
+
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0%;
+            height: 3px;
+            background: var(--main-color);
+            transition: 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 40px 0;
+            font-size: 32px;
+            color: #333;
+        }
+
+        .bike-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            padding: 20px 60px;
+        }
+
+        .bike-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            transition: 0.4s;
+            position: relative;
+        }
+
+        .bike-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .bike-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .bike-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .price {
+            color: red;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+
+        button {
+            background: var(--main-color);
+            border: none;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.4s;
+        }
+
+        button:hover {
+            background: black;
+            color: white;
+            letter-spacing: 1px;
+            transform: scale(1.1);
+        }
+
+
+        footer {
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+
+
+        @media(max-width:768px) {
+
+            header {
+                flex-direction: column;
+            }
+
+            .bike-container {
+                padding: 20px;
+            }
+
+            .section-title {
+                font-size: 26px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>Car Showroom</h1>
+            <nav>
+                <a href="index.html">Home</a>
+            </nav>
+        </header>
+
+        <h2 class="section-title">Available Bikes</h2>
+
+        <div class="bike-container">
+
+            <div class="bike-card">
+                <img src="https://tse4.mm.bing.net/th/id/OIP.qozReCAZCyizyivIqt_LdAHaDz?pid=Api&h=220&P=0">
+                <h3>FORTUNER</h3>
+                <p class="price">2.00 cr</p>
+                <a href="contact.html"><button>Contact Me</button></a>
+            </div>
+
+            <div class="bike-card">
+                <img src="https://tse3.mm.bing.net/th/id/OIP.raDz01sCQ9OL2PnzBjeYcgHaEK?pid=Api&h=220&P=0">
+                <h3>DEFENDER</h3>
+                <p class="price">₹5O,90,000</p>
+                <a href="contact.html"><button>Contact Me</button></a>
+            </div>
+
+            <div class="bike-card">
+                <img src="https://tse4.mm.bing.net/th/id/OIP.RjgoO6kligB7JmW5kngwvAHaEK?pid=Api&h=220&P=0">
+                <h3>THAR ROXX</h3>
+                <p class="price">₹2O,20,000</p>
+                <a href="contact.html"><button>Contact Me</button></a>
+            </div>
+
+            <div class="bike-card">
+                <img src="https://tse2.mm.bing.net/th/id/OIP.LgdP7EP3adszYZXTYcQTswHaEK?pid=Api&h=220&P=0">
+                <h4>INNOVA</h4>
+                <p class="price">₹30,00,000</p>
+                <a href="contact.html"><button>Contact Me</button></a>
+            </div>
+
+            <div class="bike-card">
+                <img
+                    src="https://up.yimg.com/ib/th/id/OIP.RJUl8nFjsJR6ct3fa9Mz2gHaE8?pid=Api&rs=1&c=1&qlt=95&w=147&h=98">
+                <h5>SWIFT</h5>
+                <p class="price">₹30,00,000</p>
+                <a href="contact.html"><button>Contact Me</button></a>
+            </div>
+
+            <div class="bike-card">
+                <img
+                    src="https://up.yimg.com/ib/th/id/OIP.LDdjV5baIP0xaHPjrJaA9AHaE6?pid=Api&rs=1&c=1&qlt=95&w=182&h=120">
+                <h6>RANGE ROVER</h6>
+                <p class="price">₹3.CR</p>
+                <a href="contact.html"><button>Contact Me</button></a>
+            </div>
+    </main>
+    <footer>
+        <p> Car Showroom | All Rights Reserved</p>
+    </footer>
+
+</body>
+
+</html>
